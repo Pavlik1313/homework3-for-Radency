@@ -2,6 +2,7 @@ import {NoteData} from "../interfaces/NoteData";
 import {Statistic} from "../interfaces/Statistic";
 import {EditNoteData} from "../interfaces/EditNoteData";
 
+
 class NotesService {
     notes: NoteData[] = []
 
@@ -53,3 +54,4 @@ class NotesService {
     }
 
 }
+export const notesService = new NotesService()
