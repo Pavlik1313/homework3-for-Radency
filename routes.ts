@@ -2,10 +2,11 @@ import {Express} from 'express'
 import {validateReqBody} from "./middleware/validateReqBody";
 import {newNoteSchema} from "./schema/newNoteSchema";
 import {editNoteSchema} from "./schema/editNoteSchema";
+import {getInfoController} from "./controllers/infoController";
 
 export function routes (app: Express): void{
     app.route('/')
-        .get(()=> {throw '/ Get controller isn`t implemented'})
+        .get(getInfoController)
 
     app.route('/notes')
         .get(()=> {throw '/notes Get controller isn`t implemented'})
