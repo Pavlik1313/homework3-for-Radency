@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<style>
+    table{
+        width: 100%;
+        font-size: 20px;
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid grey;
+    }
+    td {
+        padding: 5px;
+    }
+    th{
+        background: lightslategray;
+    }
+</style>
+
+<h1>List of endpoints</h1>
+<table>
+    <tr>
+        <th>Route</th>
+        <th>Methods</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td rowspan="2">/notes</td>
+        <td>GET</td>
+        <td>Get all notes</td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>Create new note</td>
+    </tr>
+    <tr>
+        <td>/notes/active</td>
+        <td>GET</td>
+        <td>Get all active notes</td>
+    </tr>
+    <tr>
+        <td rowspan="2">/notes/archived</td>
+        <td>GET</td>
+        <td>Get all archived notes</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>Clear archive</td>
+    </tr>
+    <tr>
+        <td>/notes/statistic</td>
+        <td>GET</td>
+        <td>Get number of notes by categories</td>
+    </tr>
+    <tr>
+        <td rowspan="3">/notes/:id</td>
+        <td>GET</td>
+        <td>Get note by id</td>
+
+    <tr>
+        <td>PATCH</td>
+        <td>Edit note by id</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>Delete note by id</td>
+    </tr>
+</table>
+
+</body>
+</html>
