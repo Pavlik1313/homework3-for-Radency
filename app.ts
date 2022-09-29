@@ -1,7 +1,12 @@
 import express from "express";
-import {routes} from "./routes";
+const   notesRouter = require("./routers/notesRouter"),
+        infoRouter = require("./routers/infoRouter")
+
 const app = express();
 app.use(express.json());
-routes(app);
+
+app.use(notesRouter)
+    .use(infoRouter)
+
 
 app.listen(3050, ()=>console.log('http://localhost:3050'))
