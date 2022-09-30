@@ -1,6 +1,7 @@
 import {NoteData} from "../interfaces/NoteData";
 import {Statistic} from "../interfaces/Statistic";
 import {EditNoteData} from "../interfaces/EditNoteData";
+import {dateHelper} from "../helpers/dateHelper";
 
 
 class NotesService {
@@ -44,6 +45,7 @@ class NotesService {
         const noteIndex = this.notes.findIndex((note) => note.id === id)
         if (noteIndex > -1){
             this.notes[noteIndex] = {...this.notes[noteIndex], ...editedNote};
+            if (editedNote.text) this.notes[noteIndex].dates = dateHelper.findDates(editedNote.text)
         }else throw `Note with id: ${id} not found`
     }
     deleteNote(id:number){
